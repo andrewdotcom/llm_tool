@@ -5,15 +5,22 @@ A small python tool I put together to help me use models though ollama on my lap
 It uses the [openai](http://www.openai.com) compatible [ollama](https://ollama.com) API.
 
 ## Use
-```python3 ./llm.py -m "llama2" -p "say hello" -o "hi.txt" -v```
+```python3 ./llm.py -m "llama2" -p "say hello" -o "./llm_response_file.txt" -v```
 
-or 
+or
 
 ```chmod +x llm.py && mv ./llm.py llm```
 
 then
 
-```./llm -m "llama2" -p "say hello" -o "hi.txt" -v```
+### Prompt provided through -p argument
+```./llm -m "llama2" -p "say hello" -o "./llm_response_file.txt" -v```
+
+### Prompt read from stdin (piped from cat myfile.txt)
+```cat my_prompt_file.txt | ./llm -m "llama2" -o "./llm_response_file.txt" -v```
+
+### Prompt read from a file
+```./llm -m "llama2" -f "./my_prompt_file.txt" -o "./llm_response_file.txt" -v```
 
 ## Args
 * **-m** Specify the model to use (required)
