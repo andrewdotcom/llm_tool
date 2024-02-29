@@ -16,7 +16,7 @@ then
 ### Prompt provided through -p argument
 ```./llm -m "llama2" -p "say hello" -o "./llm_response_file.txt" -v```
 
-### Prompt read from stdin (piped from cat myfile.txt)
+### Prompt read from stdin (piped from cat my_prompt_file.txt)
 ```cat my_prompt_file.txt | ./llm -m "llama2" -o "./llm_response_file.txt" -v```
 
 ### Prompt read from a file
