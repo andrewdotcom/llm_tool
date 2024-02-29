@@ -1,4 +1,5 @@
 venv
+prompt_templates
 
 *.txt
 *.DS_Store
